@@ -54,14 +54,13 @@ public class BackTesterTests {
     @Test
     public void exitTradeTest(){
         Tracker tracker = new Tracker();
-
-        int lenBefore = tracker.activeTrades.size();
+        tracker.enterTrade(1.0, 10000, 0.9, 1.2);
 
         tracker.exitTrade();
 
         int lenAfter = tracker.activeTrades.size();
 
-        assertEquals(lenAfter - lenBefore, 1);
+        assertEquals(lenAfter, 0);
     }
 
 
