@@ -17,9 +17,14 @@ public class Tracker {
         activeTrades.put(currencyPair, temp);
     }
 
-    public void exitTrade(String currencyPair) {
+    public void exitTrade(String currencyPair, double exitPip) {
         Trade toRemove = activeTrades.get(currencyPair);
+        toRemove.endTrade(exitPip);
         pastTrades.add(toRemove);
         activeTrades.remove(currencyPair);
+    }
+
+    public Trade getTrade(String currencyPair) {
+        return activeTrades.get(currencyPair);
     }
 }

@@ -1,6 +1,7 @@
 public class Trade {
 
     private double enterPip;
+    private double exitPip;
     private int size;
     private double stopLoss;
     private double takeProfit;
@@ -10,5 +11,9 @@ public class Trade {
         this.size = size;
         this.stopLoss = stopLoss;
         this.takeProfit = takeProfit;
+    }
+
+    public void endTrade(double exitPip){
+        this.exitPip = exitPip;
     }
 }

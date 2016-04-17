@@ -56,14 +56,27 @@ public class BackTesterTests {
         Tracker tracker = new Tracker();
         tracker.enterTrade("EURUSD", 1.0, 10000, 0.9, 1.2);
 
-        tracker.exitTrade("EURUSD");
+        tracker.exitTrade("EURUSD", 1.2);
 
         int lenAfter = tracker.activeTrades.size();
 
         assertEquals(lenAfter, 0);
     }
 
+    @Test
+    public void getTradeTest(){
+        Tracker tracker = new Tracker();
+        tracker.enterTrade("EURUSD", 1.0, 10000, 0.9, 1.2);
+        Trade trade = tracker.getTrade("EURUSD");
+        assertNotNull(trade);
+    }
 
+    @Test
+    public void calculateTradePipProfitTest(){
+        Tracker tracker = new Tracker();
+        tracker.enterTrade("EURUSD", 1.0, 10000, 0.9, 1.2);
+        tracker.exitTrade("EURUSD", 1.2);
+    }
 
 
 
