@@ -27,4 +27,6 @@ public class Tracker {
     public Trade getTrade(String currencyPair) {
         return activeTrades.get(currencyPair);
     }
+
+
 }

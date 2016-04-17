@@ -74,8 +74,14 @@ public class BackTesterTests {
     }
 
     @Test
-    public void getPastTrade(Date exitTime){
+    public void getPastTrade(int tradeId){
+        Tracker tracker = new Tracker();
+        tracker.enterTrade("EURUSD", 1.0, 10000, 0.9, 1.2);
+        tracker.exitTrade("EURUSD", 1.2);
 
+        Trade trade = tracker.getPastTrade(tradeId);
+
+        assertNotNull(trade);
     }
 
     @Test
