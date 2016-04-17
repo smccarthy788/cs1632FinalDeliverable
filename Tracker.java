@@ -7,7 +7,9 @@ public class Tracker {
         activeTrades = new ArrayList<Trade>();
     }
 
-    public void enterTrade() {
+    public void enterTrade(double enterPip, int size, double stopLoss, double takeProfit) {
+        Trade temp = new Trade(enterPip, size, stopLoss, takeProfit);
+        activeTrades.add(temp);
     }
 
     public void exitTrade() {

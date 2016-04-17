@@ -42,7 +42,7 @@ public class BackTesterTests {
 
         int lenBefore = tracker.activeTrades.size();
 
-        tracker.enterTrade();
+        tracker.enterTrade(1.0, 10000, 0.9, 1.2);
 
         int lenAfter = tracker.activeTrades.size();
 
