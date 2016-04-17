@@ -42,7 +42,7 @@ public class BackTesterTests {
 
         int lenBefore = tracker.activeTrades.size();
 
-        tracker.enterTrade(1.0, 10000, 0.9, 1.2);
+        tracker.enterTrade("EURUSD", 1.0, 10000, 0.9, 1.2);
 
         int lenAfter = tracker.activeTrades.size();
 
@@ -54,9 +54,9 @@ public class BackTesterTests {
     @Test
     public void exitTradeTest(){
         Tracker tracker = new Tracker();
-        tracker.enterTrade(1.0, 10000, 0.9, 1.2);
+        tracker.enterTrade("EURUSD", 1.0, 10000, 0.9, 1.2);
 
-        tracker.exitTrade();
+        tracker.exitTrade("EURUSD");
 
         int lenAfter = tracker.activeTrades.size();
 
