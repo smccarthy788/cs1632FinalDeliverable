@@ -40,11 +40,11 @@ public class BackTesterTests {
     public void enterTradeTest() {
         Tracker tracker = new Tracker();
 
-        int lenBefore = tracker.activeTrades.length;
+        int lenBefore = tracker.activeTrades.size();
 
         tracker.enterTrade();
 
-        int lenAfter = tracker.activeTrades.length;
+        int lenAfter = tracker.activeTrades.size();
 
         assertEquals(lenAfter - lenBefore, 1);
     }
@@ -55,11 +55,11 @@ public class BackTesterTests {
     public void exitTradeTest(){
         Tracker tracker = new Tracker();
 
-        int lenBefore = tracker.activeTrades.length;
+        int lenBefore = tracker.activeTrades.size();
 
         tracker.exitTrade();
 
-        int lenAfter = tracker.activeTrades.length;
+        int lenAfter = tracker.activeTrades.size();
 
         assertEquals(lenAfter - lenBefore, 1);
     }
