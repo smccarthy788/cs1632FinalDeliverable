@@ -128,6 +128,13 @@ public class BackTesterTests {
     }
 
     // getCloseBid Test
+    @Test
+    public void getCloseBidTest(){
+        DataPoint dataPoint = new DataPoint(rawData);
+        double closeBid = dataPoint.getCloseBid();
+
+        assertEquals(closeBid, 1.0, 1e-15);
+    }
 
     // getOpenAsk Test
 
