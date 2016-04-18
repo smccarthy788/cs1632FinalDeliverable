@@ -37,4 +37,9 @@ public class Tracker {
     public Trade getPastTrade(int tradeId) {
         return pastTrades.get(tradeId);
     }
+
+    public double getProfit(int tradeId) {
+        Trade trade = getPastTrade(tradeId);
+
+    }
 }

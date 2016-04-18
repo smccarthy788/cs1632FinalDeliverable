@@ -87,10 +87,12 @@ public class BackTesterTests {
     @Test
     public void calculateTradePipProfitTest(){
         Tracker tracker = new Tracker();
-        tracker.enterTrade("EURUSD", 1.0, 10000, 0.9, 1.2);
+        int tradeId = tracker.enterTrade("EURUSD", 1.0, 10000, 0.9, 1.2);
         tracker.exitTrade("EURUSD", 1.2);
 
+        double pipProfit = tracker.getProfit(tradeId);
 
+        assertEquals(pipProfit, .2);
     }
 
 
