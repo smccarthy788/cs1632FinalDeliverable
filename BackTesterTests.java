@@ -154,8 +154,14 @@ public class BackTesterTests {
         assertEquals(highAsk, 1.6, 1e-15);
     }
 
-
     // getLowAsk Test
+    @Test
+    public void getLowAskTest(){
+        DataPoint dataPoint = new DataPoint(rawData);
+        double lowAsk = dataPoint.getLowAsk();
+
+        assertEquals(lowAsk, 0.6, 1e-15);
+    }
 
     // getCloseAsk Test
 
