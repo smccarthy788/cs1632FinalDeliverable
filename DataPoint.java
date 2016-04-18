@@ -7,6 +7,7 @@ public class DataPoint {
     double openAsk;
     double highAsk;
     double lowAsk;
+    double closeAsk;
 
     public DataPoint(double[] rawData) {
         this.openBid = rawData[0];
@@ -16,6 +17,7 @@ public class DataPoint {
         this.openAsk = rawData[4];
         this.highAsk = rawData[5];
         this.lowAsk = rawData[6];
+        this.closeAsk = rawData[7];
     }
 
     public double getOpenBid(){
@@ -44,5 +46,9 @@ public class DataPoint {
 
     public double getLowAsk() {
         return lowAsk;
+    }
+
+    public double getCloseAsk() {
+        return closeAsk;
     }
 }
