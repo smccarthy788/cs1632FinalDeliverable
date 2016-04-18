@@ -137,6 +137,14 @@ public class BackTesterTests {
     }
 
     // getOpenAsk Test
+    @Test
+    public void getOpenAskTest(){
+        DataPoint dataPoint = new DataPoint(rawData);
+        double openAsk = dataPoint.getOpenAsk();
+
+        assertEquals(openAsk, 1.1, 1e-15);
+    }
+
 
     // getHighAsk Test
 
