@@ -239,7 +239,19 @@ public class BackTesterTests {
         assertEquals(dataPackage.getEndTimeStamp().getTime() - dataPackage.getStartTimeStamp().getTime(), 1000.0, 1e-15);
     }
 
+    // Feeder Tests
 
+    // Feeder.next() test
+    @Test
+    public void feederNextTest(){
+        DataPoint[] dataPoints = {new DataPoint(rawData, new Date(System.currentTimeMillis()))}
+        DataPackage dataPackage = new DataPackage(dataPoints);
+        Feeder feeder = new Feeder(dataPackage);
+
+        DataPoint dataPoint = feeder.next();
+
+        assertNotNull(dataPoint);
+    }
 
 
 
