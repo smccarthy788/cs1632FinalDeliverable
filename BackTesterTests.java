@@ -95,6 +95,34 @@ public class BackTesterTests {
         assertEquals(pipProfit, 0.2, 1e-15);
     }
 
+    // DataPoint Test
+    // Use rawData to initialize all dataPoints
+        // rawData : openBid, highBid, lowBid, closeBid, openAsk, highAsk, lowAsk, closeAsk
+    double rawData[] = {1.0, 1.5, 0.5, 1.0, 1.1, 1.6, 0.6, 1.1};
+
+    // getHighBid Test
+    @Test
+    public void getHighBidTest(){
+        DataPoint dataPoint = new DataPoint(rawData);
+        double highBid = dataPoint.getHighBid();
+
+        assertEquals(highBid, 1.0, 1e-15);
+
+    }
+    // getLowBid Test
+
+    // getOpenBid Test
+
+    // getCloseBid Test
+
+    // getHighAsk Test
+
+    // getLowAsk Test
+
+    // getOpenAsk Test
+
+    // getCloseAsk Test
+
 
 
 
