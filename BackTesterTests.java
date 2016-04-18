@@ -236,7 +236,7 @@ public class BackTesterTests {
         dataPoints[1] = new DataPoint(rawData, new Date(System.currentTimeMillis()));
         DataPackage dataPackage = new DataPackage(dataPoints);
 
-        assertEquals(dataPackage.getEndTime() - dataPackage.getStartTime(), 1000.0, 1e-15);
+        assertEquals(dataPackage.getEndTimeStamp().getTime() - dataPackage.getStartTimeStamp().getTime(), 1000.0, 1e-15);
     }
 
 
