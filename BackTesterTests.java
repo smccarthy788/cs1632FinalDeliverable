@@ -164,7 +164,13 @@ public class BackTesterTests {
     }
 
     // getCloseAsk Test
+    @Test
+    public void getCloseAskTest(){
+        DataPoint dataPoint = new DataPoint(rawData);
+        double closeAsk = dataPoint.getCloseAsk();
 
+        assertEquals(closeAsk, 1.1, 1e-15);
+    }
 
 
 
