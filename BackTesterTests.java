@@ -172,6 +172,20 @@ public class BackTesterTests {
         assertEquals(closeAsk, 1.1, 1e-15);
     }
 
+    // DataPackage Tests
+
+    // addDataPoint Test
+    @Test
+    public void addDataPointTest(){
+        DataPackage dataPackage = new DataPackage();
+        DataPoint dataPoint = new DataPoint(rawData);
+
+        dataPackage.addDataPoint(dataPoint);
+
+        assertEquals(dataPackage.length(), 1);
+    }
+
+
 
 
 }
