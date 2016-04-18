@@ -185,6 +185,22 @@ public class BackTesterTests {
         assertEquals(dataPackage.length(), 1);
     }
 
+    // DataPackage construction from multiple dataPoints
+    @Test
+    public void dataPackageMultiPointConstructionTest(){
+        DataPoint[] dataPoints = new DataPoint[3];
+        DataPoint dataPoint1 = new DataPoint(rawData);
+        dataPoints[0] = dataPoint1;
+        DataPoint dataPoint2 = new DataPoint(rawData);
+        dataPoints[1] = dataPoint2;
+        DataPoint dataPoint3 = new DataPoint(rawData);
+        dataPoints[2] = dataPoint3;
+
+        DataPackage dataPackage = new DataPackage(dataPoints);
+
+        assertEquals(dataPackage.length(), 3);
+    }
+
 
 
 
