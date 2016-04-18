@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class DataPoint {
     double openBid;
     double highBid;
@@ -9,7 +11,9 @@ public class DataPoint {
     double lowAsk;
     double closeAsk;
 
-    public DataPoint(double[] rawData) {
+    Date timeStamp;
+
+    public DataPoint(double[] rawData, Date date) {
         this.openBid = rawData[0];
         this.highBid = rawData[1];
         this.lowBid = rawData[2];
@@ -18,6 +22,8 @@ public class DataPoint {
         this.highAsk = rawData[5];
         this.lowAsk = rawData[6];
         this.closeAsk = rawData[7];
+
+        this.timeStamp = date;
     }
 
     public double getOpenBid(){
@@ -50,5 +56,9 @@ public class DataPoint {
 
     public double getCloseAsk() {
         return closeAsk;
+    }
+
+    public Date getTimeStamp(){
+        return timeStamp;
     }
 }
