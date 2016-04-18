@@ -38,4 +38,8 @@ public class DataPackage {
     public Date getEndTimeStamp() {
         return endTimeStamp;
     }
+
+    public DataPoint getDataPoint(int index){
+        return dataPoints.get(index);
+    }
 }

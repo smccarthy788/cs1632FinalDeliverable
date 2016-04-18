@@ -244,7 +244,7 @@ public class BackTesterTests {
     // Feeder.next() test
     @Test
     public void feederNextTest(){
-        DataPoint[] dataPoints = {new DataPoint(rawData, new Date(System.currentTimeMillis()))}
+        DataPoint[] dataPoints = {new DataPoint(rawData, new Date(System.currentTimeMillis()))};
         DataPackage dataPackage = new DataPackage(dataPoints);
         Feeder feeder = new Feeder(dataPackage);
 
