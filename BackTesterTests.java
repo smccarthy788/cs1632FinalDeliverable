@@ -119,6 +119,13 @@ public class BackTesterTests {
     }
 
     // getLowBid Test
+    @Test
+    public void getLowBidTest(){
+        DataPoint dataPoint = new DataPoint(rawData);
+        double lowBid = dataPoint.getLowBid();
+
+        assertEquals(lowBid, 0.5, 1e-15);
+    }
 
     // getCloseBid Test
 
