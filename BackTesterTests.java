@@ -100,26 +100,33 @@ public class BackTesterTests {
         // rawData : openBid, highBid, lowBid, closeBid, openAsk, highAsk, lowAsk, closeAsk
     double rawData[] = {1.0, 1.5, 0.5, 1.0, 1.1, 1.6, 0.6, 1.1};
 
+    // getOpenBid Test
+    @Test
+    public void getOpenBidTest(){
+        DataPoint dataPoint = new DataPoint(rawData);
+        double openBid = dataPoint.getOpenBid();
+
+        assertEquals(openBid, 1.0, 1e-15);
+    }
+
     // getHighBid Test
     @Test
     public void getHighBidTest(){
         DataPoint dataPoint = new DataPoint(rawData);
         double highBid = dataPoint.getHighBid();
 
-        assertEquals(highBid, 1.0, 1e-15);
-
+        assertEquals(highBid, 1.5, 1e-15);
     }
+
     // getLowBid Test
 
-    // getOpenBid Test
-
     // getCloseBid Test
+
+    // getOpenAsk Test
 
     // getHighAsk Test
 
     // getLowAsk Test
-
-    // getOpenAsk Test
 
     // getCloseAsk Test
 
