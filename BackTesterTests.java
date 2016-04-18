@@ -92,7 +92,7 @@ public class BackTesterTests {
 
         double pipProfit = tracker.getProfit(tradeId);
 
-        assertEquals(pipProfit, .2);
+        assertEquals(pipProfit, 0.2, 1e-15);
     }
 
 

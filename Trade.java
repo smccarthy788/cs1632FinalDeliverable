@@ -18,4 +18,12 @@ public class Trade {
     public void endTrade(double exitPip){
         this.exitPip = exitPip;
     }
+
+    public double getEnterPip(){
+        return enterPip;
+    }
+
+    public double getEndPip(){
+        return exitPip;
+    }
 }

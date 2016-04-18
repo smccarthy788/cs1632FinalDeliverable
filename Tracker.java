@@ -41,5 +41,9 @@ public class Tracker {
     public double getProfit(int tradeId) {
         Trade trade = getPastTrade(tradeId);
 
+        double profit = trade.getEndPip() - trade.getEnterPip();
+
+        return profit;
+
     }
 }
